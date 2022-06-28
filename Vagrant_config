@@ -1,0 +1,35 @@
+# Vagrant uses oracle virtualbox as defult hypervisor
+
+#1. Download Vagrant for Ubuntu (commands from official Vagrant site):
+# curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+# sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+# sudo apt-get update && sudo apt-get install vagrant
+
+# 2. create folder vagrant_vms
+# mkdir vagrant-vms
+
+# 3. Create folders inside Vagrant_vms for each vm:
+# mkdir name1
+# mkdir etc
+
+# 4. Inside each folder (name1, etc) run command:
+# vagrant init (config.vm.box), you can find this config.vm.box at https://app.vagrantup.com/boxes/search
+
+# 5. After running "init" run command (still inside folder name1 or etc.)
+# vagrant up (this command will create and run vm) 
+# (and now you can see new vm in virtualbox program)
+
+# 6. To connect to your new vm run (at the same dir):
+# vagrant ssh (and now you are inside your vm)
+
+# 7. To exit from your vm (run command inside vm): 
+# vagrant exit 
+
+# 8. To power off your vm (run command outside vm in folder name1, etc):
+# vagrant halt
+
+# 9. To destroy vm:
+# vagrant destroy
+
+# 10. To reboot vm:
+# vagrant reload
