@@ -32,4 +32,4 @@
  vagrant destroy
 
 10. To reboot vm:
- vagrant reload
+ vagrant reload   
