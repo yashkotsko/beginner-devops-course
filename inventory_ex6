@@ -1,0 +1,18 @@
+web01 ansible_host=ip 
+web02 ansible_host=ip 
+db01 ansible_host=ip  
+
+[websrvgrp]
+web01
+web02
+
+[dbsrvgrp]
+db01
+
+[dc_ohio:children]
+websrvgrp
+dbsrvgrp
+
+[dc_ohio:vars]
+ansible_user=os
+ansible_ssh_private_key=key.pem
